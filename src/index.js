@@ -1,4 +1,5 @@
 import { ColorModeScript } from '@chakra-ui/react';
+import { BrowserRouter } from 'react-router-dom';
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
@@ -9,14 +10,22 @@ const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <StrictMode>
+  // <BrowserRouter>
+  <div>
     <ColorModeScript />
-    <App />
-  </StrictMode>
+    <BrowserRouter>
+      {' '}
+      <App />
+    </BrowserRouter>
+  </div>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
+// {
+//   /* </BrowserRouter> */
+// }
+
+// // If you want your app to work offline and load faster, you can change
+// // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
 serviceWorker.unregister();
 
